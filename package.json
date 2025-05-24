@@ -1,7 +1,7 @@
 {
-  "name": "vue-toaster",
+  "name": "@hackbyte/vue-toaster",
   "version": "1.0.0",
-  "description": "A Vue 3 toaster library",
+  "description": "A modern Vue 3 toaster library with TypeScript support",
   "type": "module",
   "private": false,
   "main": "dist/vue-toaster.umd.js",
@@ -31,9 +31,17 @@
     "toaster",
     "notifications",
     "vue3"
-  ],
+  ],  
   "author": "Hitesh Saha <thehackbyte07@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hitesh-Saha/vue-toaster.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hitesh-Saha/vue-toaster/issues"
+  },
+  "homepage": "https://github.com/Hitesh-Saha/vue-toaster#readme",
   "dependencies": {
     "@tailwindcss/vite": "^4.1.6",
     "fontawesome-free": "^1.0.4",

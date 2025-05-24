@@ -1,27 +1,27 @@
-# 📦 vue-toaster
+# 📦 @hackbyte/vue-toaster
 
-A customizable, lightweight Vue 3 toaster library built with TypeScript, and TailwindCSS.
+A modern, customizable Vue 3 toaster library built with TypeScript and TailwindCSS.
 
 ## 🔥 Features
 
 * 📦 Tiny & tree-shakable
-
 * 🌈 Pre-styled with TailwindCSS
-
-* ⏱️ Auto-dismiss with progress
-
 * 🧠 Promise-based toasts
-
-* 🎯 Fully typed (TypeScript support)
-
----
+* 🎯 Full TypeScript support
+* 📱 Responsive design
+* 🔧 Easy to configure
+* 🚀 Zero dependencies (except Vue 3 and TailwindCSS)
 
 ## 🚀 Installation
 
-```
-npm install vue-toaster
-# or
-yarn add vue-toaster
+```bash
+npm install @hackbyte/vue-toaster
+
+# or using yarn
+yarn add @hackbyte/vue-toaster
+
+# or using pnpm
+pnpm add @hackbyte/vue-toaster
 ```
 
 > 🧩 This package uses TailwindCSS — you must configure that in your app.
@@ -65,10 +65,10 @@ Add in your global CSS:
 
 In `App.vue` or your root layout:
 
-```
+```vue
 <script setup lang="ts">
-import { Toaster } from 'vue-toaster';
-import 'vue-toaster/dist/vue-toaster.css'
+import { Toaster } from '@hackbyte/vue-toaster'
+import '@hackbyte/vue-toaster/dist/vue-toaster.css'
 </script>
 
 <template>
@@ -79,22 +79,32 @@ import 'vue-toaster/dist/vue-toaster.css'
 
 2. Trigger a toast
 
-In any component:
+```typescript
+import { toast } from '@hackbyte/vue-toaster'
 
+// Success toast
+toast.success('Operation completed successfully!')
+
+// Error toast
+toast.error('Something went wrong!')
+
+// Info toast
+toast.info('Did you know?')
+
+// Warning toast
+toast.warning('Please be careful!')
 ```
-import { toast, APIToast} from 'vue-toaster';
 
-toast.success('This is a success message!');
-toast.error('This is an error message!');
-toast.warning('This is a warning message!');
-toast.info('This is an info message!');
-```
+3. Async Toasts (For API Calling)
 
-3. Async toasts (for API Calling)
+```typescript
+// Promise-based toast
+const promise = async () => {
+  // Your async operation
+}
 
-```
 await APIToast(
-    yourAPICallFunction, 
+    promise, 
     'API Data Loaded Successfully!', 
     { progress: 'Loading Data' }
 );
@@ -104,24 +114,54 @@ await APIToast(
 
 Add in your `vite-env.d.ts`:
 
-```
-declare module 'vue-toaster' 
+```typescript
+declare module '@hackbyte/vue-toaster'
 ```
 
 ---
 
-## ✨ API Reference
+## 🔧 API Reference
 
-`toast.type(message: string, options?: {duration?: number})`
+### Toast Options
 
-Shows a simple toast.
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| duration | number | 4000 | Toast duration in milliseconds |
 
-`APIToast(promise, successMessage: string, options?: {progress?: string, error?: string, duration?: number})`
+### APIToast Options
 
-Displays an "in-progress" toast that updates based on the promise outcome.
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| duration | number | 4000 | Toast duration in milliseconds |
+| progress | string | Loading | Loading message while api calling |
+| error | string | An error occurred | error message to display if any error occurs |
 
----
+### Toaster Options
 
-## 🔒 License
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| position | string | bottom-right | Toaster position in application |
+| enableActions| boolean | true | Enabled or disabled the toaster close button |
 
-MIT © Hitesh Saha
+### Toast Methods
+
+- `toast.success(message, options?)`
+- `toast.error(message, options?)`
+- `toast.info(message, options?)`
+- `toast.warning(message, options?)`
+- `APIToast(promise, messages, options?)`
+
+## 🎨 Customization
+
+You can customize the toaster by disabling actions or change the toaster position or even add styling using TailwindCSS classes:
+
+```vue
+<Toaster 
+  :position="top"
+  :enableActions=false
+/>
+```
+
+## 📝 License
+
+MIT License - see the [LICENSE](LICENSE) file for details
