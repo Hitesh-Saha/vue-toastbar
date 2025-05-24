@@ -24,7 +24,7 @@ npm install vue-toaster
 yarn add vue-toaster
 ```
 
-🧩 This package uses TailwindCSS — you must configure that in your app.
+> 🧩 This package uses TailwindCSS — you must configure that in your app.
 
 ---
 
@@ -36,7 +36,7 @@ If your app doesn't already use Tailwind:
 npm install tailwindcss @tailwindcss/vite
 ```
 
-Update your vite.config.ts:
+Update your `vite.config.ts`:
 
 ```
 import { defineConfig } from 'vite'
@@ -63,7 +63,7 @@ Add in your global CSS:
 
 1. Import and mount the Toaster component
 
-In App.vue or your root layout:
+In `App.vue` or your root layout:
 
 ```
 <script setup lang="ts">
@@ -102,7 +102,7 @@ await APIToast(
 
 4. Optional: If any module declaration error occurs
 
-Add in your vite-env.d.ts:
+Add in your `vite-env.d.ts`:
 
 ```
 declare module 'vue-toaster' 
@@ -112,11 +112,11 @@ declare module 'vue-toaster'
 
 ## ✨ API Reference
 
-toast.type(message: string, options?: {duration?: number})
+`toast.type(message: string, options?: {duration?: number})`
 
 Shows a simple toast.
 
-APIToast(promise, successMessage: string, options?: {progress?: string, error?: string, duration?: number})
+`APIToast(promise, successMessage: string, options?: {progress?: string, error?: string, duration?: number})`
 
 Displays an "in-progress" toast that updates based on the promise outcome.
 
