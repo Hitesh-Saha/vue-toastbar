@@ -1,0 +1,53 @@
+{
+  "name": "vue-toaster",
+  "version": "1.0.0",
+  "description": "A Vue 3 toaster library",
+  "type": "module",
+  "private": false,
+  "main": "dist/vue-toaster.umd.js",
+  "module": "dist/vue-toaster.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-toaster.es.js",
+      "require": "./dist/vue-toaster.umd.js"
+    },
+    "./dist/vue-toaster.css": {
+      "import": "./dist/vue-toaster.css",
+      "require": "./dist/vue-toaster.css"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "vue",
+    "toaster",
+    "notifications",
+    "vue3"
+  ],
+  "author": "Hitesh Saha <thehackbyte07@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.6",
+    "fontawesome-free": "^1.0.4",
+    "mitt": "^3.0.1",
+    "tailwindcss": "^4.1.6",
+    "vite-plugin-dts": "^4.5.4",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.18",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vue-tsc": "^2.2.8"
+  }
+}
