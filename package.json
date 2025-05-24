@@ -1,6 +1,6 @@
 {
   "name": "@hackbyte/vue-toaster",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A modern Vue 3 toaster library with TypeScript support",
   "type": "module",
   "private": false,
