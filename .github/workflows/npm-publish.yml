@@ -44,13 +44,13 @@ jobs:
         with:
           files: |
             dist/*
-        body: |
-          Release of version ${{ github.ref_name }}
+          body: |
+            Release of version ${{ github.ref_name }}
 
-          ## What's Changed
-          * See commit history for details
-            
-          ## Installation
-          ```bash
-          npm install @hackbyte/vue-toaster@${{ github.ref_name }}
-          ```
+            ## What's Changed
+            * See commit history for details
+              
+            ## Installation
+            ```bash
+            npm install @hackbyte/vue-toaster@${{ github.ref_name }}
+            ```
