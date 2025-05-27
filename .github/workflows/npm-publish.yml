@@ -52,5 +52,5 @@ jobs:
               
             ## Installation
             ```bash
-            npm install @hackbyte/vue-toaster@${{ github.ref_name }}
+            npm install vue-toastbar@${{ github.ref_name }}
             ```
