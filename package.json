@@ -1,20 +1,20 @@
 {
-  "name": "@hackbyte/vue-toaster",
+  "name": "vue-toastbar",
   "version": "1.0.3",
   "description": "A modern Vue 3 toaster library with TypeScript support",
   "type": "module",
   "private": false,
-  "main": "dist/vue-toaster.umd.js",
-  "module": "dist/vue-toaster.es.js",
+  "main": "dist/vue-toastbar.umd.js",
+  "module": "dist/vue-toastbar.es.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/vue-toaster.es.js",
-      "require": "./dist/vue-toaster.umd.js"
+      "import": "./dist/vue-toastbar.es.js",
+      "require": "./dist/vue-toastbar.umd.js"
     },
-    "./dist/vue-toaster.css": {
-      "import": "./dist/vue-toaster.css",
-      "require": "./dist/vue-toaster.css"
+    "./dist/vue-toastbar.css": {
+      "import": "./dist/vue-toastbar.css",
+      "require": "./dist/vue-toastbar.css"
     }
   },
   "files": [
@@ -30,18 +30,20 @@
     "vue",
     "toaster",
     "notifications",
-    "vue3"
+    "vue3",
+    "snackbar",
+    "toastbar"
   ],
   "author": "Hitesh Saha <thehackbyte07@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Hitesh-Saha/vue-toaster.git"
+    "url": "https://github.com/Hitesh-Saha/vue-toastbar.git"
   },
   "bugs": {
-    "url": "https://github.com/Hitesh-Saha/vue-toaster/issues"
+    "url": "https://github.com/Hitesh-Saha/vue-toastbar/issues"
   },
-  "homepage": "https://github.com/Hitesh-Saha/vue-toaster#readme",
+  "homepage": "https://github.com/Hitesh-Saha/vue-toastbar#readme",
   "dependencies": {
     "@tailwindcss/vite": "^4.1.6",
     "fontawesome-free": "^1.0.4",
