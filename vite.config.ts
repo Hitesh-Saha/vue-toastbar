@@ -18,9 +18,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'vue-toaster',
+      name: 'vue-toastbar',
       formats: ["es", "cjs", "umd"],
-      fileName: (format) => `vue-toaster.${format}.js`,
+      fileName: (format) => `vue-toastbar.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],
