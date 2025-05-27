@@ -1,4 +1,4 @@
-# 📦 @hackbyte/vue-toaster
+# 📦 vue-toastbar
 
 A modern, customizable Vue 3 toaster library built with TypeScript and TailwindCSS.
 
@@ -15,13 +15,11 @@ A modern, customizable Vue 3 toaster library built with TypeScript and TailwindC
 ## 🚀 Installation
 
 ```bash
-npm install @hackbyte/vue-toaster
-
+npm install vue-toastbar
 # or using yarn
-yarn add @hackbyte/vue-toaster
-
+yarn add vue-toastbar
 # or using pnpm
-pnpm add @hackbyte/vue-toaster
+pnpm add vue-toastbar
 ```
 
 > 🧩 This package uses TailwindCSS — you must configure that in your app.
@@ -67,8 +65,8 @@ In `App.vue` or your root layout:
 
 ```vue
 <script setup lang="ts">
-import { Toaster } from '@hackbyte/vue-toaster'
-import '@hackbyte/vue-toaster/dist/vue-toaster.css'
+import { Toaster } from 'vue-toastbar'
+import 'vue-toastbar/dist/vue-toaster.css'
 </script>
 
 <template>
@@ -80,7 +78,7 @@ import '@hackbyte/vue-toaster/dist/vue-toaster.css'
 2. Trigger a toast
 
 ```typescript
-import { toast } from '@hackbyte/vue-toaster'
+import { toast } from 'vue-toastbar'
 
 // Success toast
 toast.success('Operation completed successfully!')
@@ -115,7 +113,7 @@ await APIToast(
 Add in your `vite-env.d.ts`:
 
 ```typescript
-declare module '@hackbyte/vue-toaster'
+declare module 'vue-toastbar'
 ```
 
 ---
